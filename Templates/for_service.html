@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body id="for_service">
+    {% include 'navbar.html'%}
+    <div class="container" >
+        <!-- <h1 id="values">{{users}}</h1> -->
+            <div class="row" style="margin-top: 100px; margin-bottom: 50px;">
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div class="card-header h3" id="values"><center>{{users}}</center></div>
+                        <div class="card-body">
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label for="date">SERVICE REQUIRED ON:</label>
+                                    <input type="date" name="date" class="form-control" required>
+                                </div><br>
+                                <div class="form-group mt-2">
+                                    <label for="address">SERVICE REQUIRED AT:</label>
+                                    <select name="address" id="" class="form-control" required>
+                                        <option value="">--SELECT--</option>
+                                        <option value="">TIRUPUR</option>
+                                        <option value="">COIMBATORE</option>
+                                        <option value="">CHENNAI</option>
+                                        <option value="">MADURAI</option>
+                                    </select>
+                                </div><br>
+                                <div class="form-group mt-2">
+                                    <label for="contact no">CONTACT NO:</label>
+                                    <input type="tel" maxlength="10" minlength="10" class="form-control" required>
+                                </div><br>
+                                <div class="form-group mt-2">
+                                    <label for="email">EMAIL</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div><br>   
+                                <div class="form-group mt-2">
+                                    <small>SERVICE INFORMATION</small><br>
+                                    <small>ADDITIONAL DETAILS,IF ANY</small>
+                                    <textarea name="" id="" placeholder="Enter here..." class="form-control" rows="2" required></textarea>
+                                </div><br>
+                                <div class="form-group mt-2">
+                                    <div class="form-check">
+                                        <input type="checkbox" name="agree" value="agree" class="form-check-input" required>
+                                        <label for="agree" class="form-check-lable">Agree to terms and conditions</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-2 ">
+                                    <button class=" btn btn-primary btn-block form-control">CONTINUE BOOKING</button>
+                                </div>
+                                
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<style>
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;  
+    }
+</style>
+</html>
