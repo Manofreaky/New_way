@@ -23,12 +23,13 @@ urlpatterns = [
     path('employe',views.employe,name='employe'),
     path('user',views.user,name='user'),
     path('login',views.login,name='login'),
-    path('signup',views.signup,name='signup'),
+    path('signup',views.sign,name='signup'),
     path('register',views.register,name='register'),
     path('Job_hiring/',views.job_hiring,name="jobhiring"),
     # path('Job_hiring/Register/',views.register,name='register'),
     path('services/',views.services,name='services'),
     path('services/<str:user>',views.pro,name="product"),
-    path('Job_hiring/Register/submit',views.submit),
-    # path('Signup',views.signup)
+    path('Job_hiring/Job_hiring/Register/submit',views.submit),
+    path('services/users/book', views.book, name="book"),
+    #path('Signup',views.signup)
 ]

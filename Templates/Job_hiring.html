@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="card-header h3"><center>FOR HIRING!</center></div>
                     <div class="card-body">
-                        <form action="submit" method="post">
+                        <form action="Job_hiring/Register/submit" method="post">
                             {% csrf_token %}
                             <div class="form-group">
                                 <label for="name">NAME</label>
@@ -25,15 +25,15 @@
                                 <label for="address">LOCATION</label>
                                 <select name="address" id="" class="form-control" required>
                                     <option value="">--SELECT--</option>
-                                    <option value="">TIRUPUR</option>
-                                    <option value="">COIMBATORE</option>
-                                    <option value="">CHENNAI</option>
-                                    <option value="">MADURAI</option>
+                                    <option value="Tirupur">TIRUPUR</option>
+                                    <option value="Coimbatore">COIMBATORE</option>
+                                    <option value="Chennai">CHENNAI</option>
+                                    <option value="Madurai">MADURAI</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="contact no">CONTACT NO:</label>
-                                <input type="tel" maxlength="10" minlength="10" class="form-control" required>
+                                <input type="tel" name="conno" maxlength="10" minlength="10" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">EMAIL</label>
@@ -47,10 +47,10 @@
                                 <label for="job">JOB ROLE</label>
                                 <select name="job" id="" class="form-control" required>
                                     <option value="">--SELECT--</option>
-                                    <option value="">Technician of home appliances</option>
-                                    <option value="">Electrician</option>
-                                    <option value="">Plumber </option>
-                                    <option value="">Mechanics</option>
+                                    <option value="Technician of home appliances">Technician of home appliances</option>
+                                    <option value="Electrician">Electrician</option>
+                                    <option value="Plumber">Plumber </option>
+                                    <option value="Mechanics">Mechanics</option>
                                 </select>
                             </div>
                             <div class="form-group">
