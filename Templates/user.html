@@ -12,16 +12,18 @@
         <div class="row" style="margin-top: 100px;margin-bottom: 50px" >
             <div class="col-sm-5">
                 <div class="card">
-                    <div class="card-header h3"><center>USER LOGIN</center></div>
+                    <div class="card-header h3"><center>LOGIN</center></div>
+                    
+                    <center><h6 style="color: red;">{{error}}</h6></center>
                     <div class="card-body">
-                        <form action="submit" method="post">
+                        <form action="login" method="post">
                             {% csrf_token %}
                             <div class="form-group">
-                                <label for="name">USER NAME</label>
-                                <input type="text" name="name" class="form-control"  required>
+                                <label for="name">Email</label>
+                                <input type="text" name="email" class="form-control"  required>
                             </div>
                             <div class="mt-2 form-group">
-                                <label for="password">PASSWORD</label>
+                                <label for="password">Password</label>
                                 <input type="text" name="password" class="form-control" required>
                             </div>
                             <div class="form-group mt-3">

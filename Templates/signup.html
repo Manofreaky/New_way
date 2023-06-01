@@ -7,31 +7,33 @@
     <title>Document</title>
 </head>
 {% include 'navbar.html'%}
+{%block content%}
 <body>
     <div class="container">
         <div class="row" style="margin-top: 100px;margin-bottom: 50px" >
             <div class="col-sm-5">
                 <div class="card">
-                    <div class="card-header h3"><center>NEW USER</center></div>
+                    <div class="card-header h3"><center>SIGN UP</center></div>
                     <div class="card-body">
                         <form action="" method="post">
                             {% csrf_token %}
+                            <center><h6 style="color: red;">{{error}}</h6></center>
                             <div class="form-group">
-                                <label for="name">USER NAME</label>
-                                <input type="text" name="name" class="form-control"  required>
+                                <label for="name">Username</label>
+                                <input type="text" name="signname" class="form-control"  required >
                             </div>
                             <div class="form-group">
-                                <label for="email">EMAIL</label>
-                                <input type="email" name="email" class="form-control" required>
+                                <label for="email">Email</label>
+                                <input type="email" name="signemail" class="form-control" required>
                             </div>
                             <div class="mt-2 form-group">
-                                <label for="password">PASSWORD</label>
-                                <input type="password" name="password" class="form-control" required>
+                                <label for="password">Password</label>
+                                <input type="password" name="signpassword" class="form-control" required>
                             </div>
                             <div class="form-group mt-3">
                                 <button class=" btn btn-success btn-block form-control">Sign up</button>
                             </div>
-                            <p class="mt-3">Already have an user account? <a href="login" class="text-decoration-none">Log in</a> </p>
+                            <p class="mt-3">Already have an account? <a href="login" class="text-decoration-none">Log in</a> </p>
                         </form>
                     </div>   
                 </div>
@@ -46,5 +48,5 @@
         justify-content: center;
         }
     </style>
-
+{%endblock%}
 </html>
